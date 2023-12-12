@@ -7,6 +7,11 @@ public class Main {
         int toplam = 0,sayac =0;
         int gecmeNotu = 55;
 
+        //for dongusu kullanarak dongu icinde kontrol yapip daha kisa bir sekilde
+        //yazilabilir. Ama burada for kullanilmayacagi icin mecbur ayri ayri giris aldim
+        //sirasiyla notlari kulklanicidan aliyor ve aralik kontrolu yapiliyor
+        //eger aralik 0 ile 100 arasindaysa kac ders notu gecerli anlamak icin sayac 1 arttiriliyor
+
         System.out.print("Matematik notu: ");
         int matematikNot = scanner.nextInt();
         if (matematikNot >= 0 && matematikNot <= 100) {
@@ -42,6 +47,7 @@ public class Main {
             sayac++;
         }
 
+        //sayac 0'dan buyuk ise gecerli notlar var demektir ve ortalamayi hesapliyoruz
         if (sayac > 0) {
             double ortalama = (double) toplam / sayac;
             System.out.println("Girilen gecerli notlarin ortalamasi: " + ortalama);
