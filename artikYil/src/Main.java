@@ -12,11 +12,18 @@ public class Main {
         System.out.print("Yil giriniz : ");
         year = inp.nextInt();
 
-        //formula for leap year is year/100)%4
-        if((year/100)%4 == 0){
-            System.out.println(year + " " + "bir artik yildir");
-        }else{
-            System.out.println(year + " " + "bir artik yil degildir");
+
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                System.out.println(year + " Yili artik yildir");
+            } else {
+                System.out.println(year + " Yili artik yil değildir.");
+            }
+        } else if (year % 4 == 0) {
+            System.out.println(year + " Yili artik yildir");
+
+        } else {
+            System.out.println(year + " Yili artik yil değildir.");
         }
     }
 }
